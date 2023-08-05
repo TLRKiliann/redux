@@ -6,11 +6,13 @@ const Counter = () => {
   const counter = useSelector(state => state.counter)
   const dispatch = useDispatch()
   const increment = useCallback(() => dispatch(actions.increment()))
+  const decrement = useCallback(() => dispatch(actions.decrement()))
   return (
     <p>
       Compteur:
       <span>{counter}</span>
       <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </p>
   )
 }

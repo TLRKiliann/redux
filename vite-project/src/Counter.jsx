@@ -8,12 +8,14 @@ const Counter = ({ counter, increment }) => (
     Compteur:
     <span>{counter}</span>
     <button onClick={() => increment()}>+</button>
+    <button onClick={() => decrement()}>-</button>
   </p>
 )
 
 Counter.propTypes = {
   counter: PropTypes.number.isRequired,
-  increment: PropTypes.func.isRequired
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
@@ -22,6 +24,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   increment: () => actions.increment()
+  decrement: () => actions.decrement()
 }
 
 export default connect(
