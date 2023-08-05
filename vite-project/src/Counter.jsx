@@ -7,6 +7,7 @@ const Counter = ({ counter, increment }) => (
   <p>
     Compteur:
     <span>{counter}</span>
+
     <button onClick={() => increment()}>+</button>
     <button onClick={() => decrement()}>-</button>
   </p>
@@ -22,7 +23,7 @@ const mapStateToProps = state => ({
   counter: state.counter
 })
 
-const mapDispatchToProps = {
+const mapDispatchToProps = () => {
   increment: () => actions.increment()
   decrement: () => actions.decrement()
 }

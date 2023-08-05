@@ -7,6 +7,7 @@ const actionTypes = {
   DECREMENT: 'decrement',
 }
 
+// export for Counter & CounterWithHooks
 export const actions = {
   increment: () => ({
     type: actionTypes.INCREMENT,
